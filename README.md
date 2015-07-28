@@ -17,7 +17,9 @@ AWS_SECRET_KEY = '\<AWS_KEY\>'
 Crete at least 1 security group with at least 1 rule:
 
 Group1= [
+
 	#Example : SecurityGroupRule("tcp", "443", "443", "0.0.0.0/0", None)
+	
 ]
 
 SecurityGroupRule format:
@@ -33,11 +35,13 @@ If you wish to add more than one Group pleese create more lists:
 For example:
 
 Group2= [
+
 	SecurityGroupRule("tcp", "443", "443", "0.0.0.0/0", None),
 	
 	SecurityGroupRule("tcp", "8080", "8080", "0.0.0.0/0", None),
 	
 	SecurityGroupRule("tcp", "22", "22", "2.1.1.0/0", None)
+	
 ]
 
 
