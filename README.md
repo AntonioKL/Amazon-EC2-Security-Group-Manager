@@ -1,4 +1,4 @@
-# Amazon_Manage_Security_Group
+# Amazon Manage Security Groups
 
 Please note that amazon has some limitation on the ammount of rules.
 For more inforamtion:
