@@ -23,7 +23,9 @@ Group1= [
 ]
 
 SecurityGroupRule format:
+
 ["ip_protocol", "from_port", "to_port", "cidr_ip", "src_group_name"])
+
 
 ip_protocol : tcp/udp
 from_port: specify port
