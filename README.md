@@ -19,6 +19,15 @@ Group1= [
 	
 ]
 
+SecurityGroupRule format:
+["ip_protocol", "from_port", "to_port", "cidr_ip", "src_group_name"])
+
+ip_protocol : tcp/udp
+from_port: specify port
+to_port: specify port ( Usually the same as from_port)
+cidr_ip: IP that includes subnet
+src_group_name: Another "security group name" in amazon ( Access to the whole group)  
+
 If you wish to add more than one Group pleese create more lists:
 For example:
 
