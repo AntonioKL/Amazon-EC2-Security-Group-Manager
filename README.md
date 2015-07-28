@@ -8,8 +8,11 @@ To execute the script plese insert the following credentials:
 ec2_region="Chose region for example: us-west-2"
 
 Insert the ID and a SECRET Key generated from IAM:
+
 AWS_ID='<AWS_ID>'
+
 AWS_SECRET_KEY='<AWS_KEY>'
+
 
 Crete at least 1 security group with at least 1 rule:
 
