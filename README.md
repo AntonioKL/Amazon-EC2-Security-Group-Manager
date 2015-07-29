@@ -1,13 +1,15 @@
 # Amazon Manage Security Groups
 
-Please note that amazon has some limitation on the ammount of rules.
-For more inforamtion:
+Please note that 
+Amazon has some limitation on the available number of rules.
+For more information please go to:
 http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Appendix_Limits.html
 
-To execute the script plese insert the following credentials: 
-ec2_region="Chose region for example: us-west-2"
+To execute the script please insert the following credentials: 
 
-Insert the ID and a SECRET Key generated from IAM:
+ec2_region="Chose region according to regions in EC2 for example: us-west-2"
+
+Insert the AWS_ID and the SECRET_Key generated from IAM:
 
 AWS_ID = '\<AWS_ID\>'
 
@@ -16,7 +18,7 @@ AWS_SECRET_KEY = '\<AWS_KEY\>'
 
 
 
-Crete at least 1 security group with at least 1 rule:
+Crete at least 1 security group containing at least 1 rule:
 
 Group1= [
 
@@ -35,14 +37,15 @@ from_port: specify port
 
 to_port: specify port ( Usually the same as from_port)
 
-cidr_ip: IP that includes subnet
+cidr_ip: IP which includes subnet mask
 
-src_group_name: Another "security group name" in amazon ( Access to the whole group)  
-
-
+src_group_name: Reference to a different "security group name" inside EC2 at the same region ( Gives access to the whole group)  
 
 
-If you wish to add more than one Group pleese create more lists:
+
+
+If you wish to manage more than one Group please create more lists:
+
 For example:
 
 Group2= [
@@ -56,9 +59,11 @@ Group2= [
 ]
 
 
-In addition you should specify each group in the SECURITY_GROUPS list:
+Please note that you should specify each group in the SECURITY_GROUPS List:
+
+For example:
 
 SECURITY_GROUPS = [("Group Name in EC2", Group1), ("Security_Group2_amazon", Group2)]
 
-The script will automaticaly create the security group at the desired region, if it doesn't exist. 
-If the group exists it will update the rules. Previous rules won't be saved and will be wiped out. 
+The script will create the security group at the desired region, if it doesn't exist. 
+If the group already exists, it will update the rules. Previous rules won't be saved and will be wiped out. 
